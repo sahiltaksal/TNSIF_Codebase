@@ -34,7 +34,7 @@ public class main {
 	   System.out.println(person.getGender());
 	   System.out.println(person.getIncome());
 	   System.out.println(person.getMobilenumber());
-	   
+	   System.out.println(person.getTax());
 	   
 	   //display person detail 
 	   System.out.println(person);
