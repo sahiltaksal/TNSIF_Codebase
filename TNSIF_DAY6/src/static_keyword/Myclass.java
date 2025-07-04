@@ -29,7 +29,7 @@ public class Myclass {
 		//Cannot make a static reference to the non-static field section
 		//System.out.println(section);
 		
-		System.out.println("serial no"+ srno);
+		System.out.println("serial No: "+ srno);
 	}
 	
 }

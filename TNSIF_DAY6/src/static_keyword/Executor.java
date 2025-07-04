@@ -10,7 +10,14 @@ public class Executor {
 		
 		Myclass o1=new Myclass();
 		System.out.println(o1);
+		
+		Myclass.display();
 
+		System.out.println();
+		
+		Myclass o2=new Myclass();
+		System.out.println(o2);
+		
 	}
 
 }
