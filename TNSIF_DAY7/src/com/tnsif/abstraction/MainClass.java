@@ -13,6 +13,7 @@ public class MainClass {
 			s.calarea();
 			s.show();
 			
+			
 	}
 
 }

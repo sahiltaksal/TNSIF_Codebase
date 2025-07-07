@@ -7,6 +7,7 @@ public class Rectangular extends Shape {
 	public Rectangular() {
 		
 		width=3.2f;
+		
 		height=2.0f;
 		
 		

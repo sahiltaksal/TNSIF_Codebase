@@ -10,6 +10,7 @@ public abstract class Shape {
 	
 	public void show() {
 		System.out.println("Area is : "+area);
+		
 
 	}
 

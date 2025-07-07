@@ -11,6 +11,7 @@ public Square() {
 public Square(float side) {
 	
 	this.side = side;
+	
 }
 
 @Override
