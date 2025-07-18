@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roll Galaxy - Multiplayer Dice Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <div class="setup-screen" id="setupScreen">
+      <div class="logo">🎲 Roll Galaxy</div>
+      <div class="subtitle">Embark on a Multiplayer Dice Adventure</div>
+
+      <div class="form-group">
+        <label for="playerCount">Number of Players (2–6)</label>
+        <div class="input-group">
+          <select id="playerCount">
+            <option value="2">2 Players</option>
+            <option value="3">3 Players</option>
+            <option value="4">4 Players</option>
+            <option value="5">5 Players</option>
+            <option value="6">6 Players</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="winningScore">Winning Score</label>
+        <div class="input-group">
+          <input type="number" id="winningScore" min="10" max="100" value="50" placeholder="Enter winning score" />
+        </div>
+      </div>
+
+      <div id="playerNames"></div>
+
+      <button class="start-btn" onclick="startGame()">🚀 Start Game</button>
+    </div>
+
+    <div class="game-screen" id="gameScreen">
+      <div class="game-header">
+        <div class="logo">🎲 Roll Galaxy</div>
+        <div class="game-info">
+          <div class="info-card">
+            <div class="info-label">Round</div>
+            <div class="info-value" id="currentRound">1</div>
+          </div>
+          <div class="info-card">
+            <div class="info-label">Target</div>
+            <div class="info-value" id="targetScore">50</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-game">
+        <div class="game-board">
+          <div class="current-player turn-indicator">
+            <div class="player-name" id="currentPlayerName">Player 1</div>
+            <div class="player-score" id="currentPlayerScore">Score: 0</div>
+          </div>
+
+          <div class="dice-container">
+            <div class="dice-3d" id="dice3d">
+              <div class="dice-face front" id="face1"><div class="dice-dots"><div></div><div></div><div></div><div></div><div class="dot"></div><div></div><div></div><div></div><div></div></div></div>
+              <div class="dice-face back" id="face6"><div class="dice-dots"><div class="dot"></div><div></div><div class="dot"></div><div class="dot"></div><div></div><div class="dot"></div><div class="dot"></div><div></div><div class="dot"></div></div></div>
+              <div class="dice-face right" id="face2"><div class="dice-dots"><div class="dot"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="dot"></div></div></div>
+              <div class="dice-face left" id="face5"><div class="dice-dots"><div class="dot"></div><div></div><div class="dot"></div><div></div><div class="dot"></div><div></div><div class="dot"></div><div></div><div class="dot"></div></div></div>
+              <div class="dice-face top" id="face3"><div class="dice-dots"><div class="dot"></div><div></div><div></div><div></div><div class="dot"></div><div></div><div></div><div></div><div class="dot"></div></div></div>
+              <div class="dice-face bottom" id="face4"><div class="dice-dots"><div class="dot"></div><div></div><div class="dot"></div><div></div><div></div><div></div><div class="dot"></div><div></div><div class="dot"></div></div></div>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button class="roll-btn" id="rollBtn" onclick="rollDice()">🎲 Roll Dice</button>
+          </div>
+        </div>
+
+        <div class="leaderboard">
+          <h3>🏆 Leaderboard</h3>
+          <div class="player-list" id="playerList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-over" id="gameOver">
+    <div class="game-over-content">
+      <div class="winner-text">🎉 Game Over!</div>
+      <div id="winnerName" style="font-size: 1.8rem; font-weight: 600; color: #374151; margin-bottom: 20px;"></div>
+      <div id="finalScore" style="font-size: 1.2rem; color: #64748b; margin-bottom: 20px;"></div>
+      <button class="new-game-btn" onclick="newGame()">🔄 New Game</button>
+    </div>
+  </div>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

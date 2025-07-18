@@ -1,0 +1,29 @@
+package com.tnsif.abstraction;
+
+public class Rectangular extends Shape {
+	
+	float width;
+	float height;
+	public Rectangular() {
+		
+		width=3.2f;
+		
+		height=2.0f;
+		
+		
+	}
+	public Rectangular(float width, float height) {
+	
+		this.width = width;
+		this.height = height;
+	}
+	@Override
+	public void calarea() {
+		
+		this.area=width*height;
+		
+	}
+	
+	
+
+}
